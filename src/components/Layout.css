@@ -1,0 +1,118 @@
+.header {
+    background-color: #1a1a1a; /* Dark grey */
+    color: white;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #FFD700; /* Gold accent */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #FFD700; /* Gold border */
+}
+
+.portfolio-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #FFD700; /* Gold color */
+}
+
+.navigation {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 215, 0, 0.1); /* Gold with transparency */
+    color: #FFD700; /* Gold on hover */
+}
+
+/* Active link styling */
+.nav-link.active {
+    background-color: #FFD700; /* Gold */
+    color: #1a1a1a; /* Dark grey text */
+}
+
+/* Add padding to body to account for fixed header */
+body {
+    padding-top: 70px;
+    background-color: #1a1a1a; /* Dark grey */
+    color: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 1rem;
+        height: 60px;
+    }
+    
+    .portfolio-title {
+        font-size: 1.2rem;
+    }
+    
+    .navigation {
+        gap: 0.3rem;
+    }
+    
+    .nav-link {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .header-left {
+        margin-bottom: 0;
+    }
+    
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    body {
+        padding-top: 120px;
+    }
+}
